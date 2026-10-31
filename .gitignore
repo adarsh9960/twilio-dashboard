@@ -1,0 +1,59 @@
+# ITZ Twilio Control Center — root .gitignore
+
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Secrets & credentials (server-side)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials.json
+service-account.json
+
+# Database
+*.dump
+*.sql
+*.sqlite
+*.db
+
+# Server-side config (server can add its own)
+config.json
+database_config.json
+
+# Uploads & recordings (may contain user data)
+uploads/
+recordings/
+public/uploads/
+public/recordings/
+
+# OS / editor
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+idea/
+.vscode/
+*.swp
+*.swo
+
+# Generated docs
+DEPLOYMENT_NOTES.md.bak
+
+# Test / coverage
+coverage/
+
+# Local migration files
+database/migrations/001_initial_schema_server.sql
+
+# Stage-specific secrets
+.env.staging
+.env.production
+
+# Server-only env (never commit real secrets)
+.itz-twilio-dashboard/.env

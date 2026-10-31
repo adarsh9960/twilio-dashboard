@@ -1,0 +1,52 @@
+{
+  "name": "twilio-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ITZ Twilio Control Center — browser-based voice calling dashboard",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node --no-warnings dist/index.js",
+    "build": "tsc -p tsconfig.json",
+    "db:migrate": "node dist/scripts/db-migrate.js",
+    "db:seed-admin": "node dist/scripts/seed-admin.js",
+    "db:reset": "node dist/scripts/db-reset.js",
+    "db:backup": "node dist/scripts/db-backup.js",
+    "db:restore": "node dist/scripts/db-restore.js",
+    "db:generate-keys": "node dist/scripts/db-generate-keys.js",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "argon2": "^0.43.1",
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
+    "csrf-sync": "^4.1.0",
+    "dotenv": "^18.0.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0",
+    "multer": "^2.0.1",
+    "pg": "^8.16.0",
+    "socket.io": "^4.8.1",
+    "twilio": "^5.6.0",
+    "uuid": "^11.1.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/express-session": "^1.18.2",
+    "@types/pg": "^8.15.5",
+    "@types/uuid": "^10.0.0",
+    "@types/node": "^24.13.0",
+    "@types/cors": "^2.8.19",
+    "@types/helmet": "^0.0.47",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}
